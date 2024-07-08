@@ -1,6 +1,6 @@
 import axios from "axios";
 const instance = axios.create({
-    baseURL: 'https://ecom-app-server-rzrl.vercel.app/api',
+    baseURL: 'https://ecom-app-server-six.vercel.app/',
 });
 // Add a request interceptor
 instance.interceptors.request.use(
