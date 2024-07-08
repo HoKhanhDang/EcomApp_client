@@ -128,6 +128,7 @@ export default function Product() {
                         }                   
                     </Slider>   */}
                     <Carousel
+                        arrows={true}
                         swipeable={true}
                         draggable={true}
                         showDots={false}
@@ -138,7 +139,7 @@ export default function Product() {
                         customTransition="all 1s"
                         transitionDuration={500}
                         containerClass="carousel-container"
-                        removeArrowOnDeviceType={["tablet", "mobile"]}
+                        removeArrowOnDeviceType={["mobile"]}
                         dotListClass="custom-dot-list-style"
                         itemClass="px-[3px]"
                         className="w-full h-full"
