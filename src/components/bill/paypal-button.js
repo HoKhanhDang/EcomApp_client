@@ -70,7 +70,8 @@ const ButtonWrapper = ({
     }, [currency, showSpinner]);
 
     useEffect(() => {
-        if (address !== "") {
+        console.log("add", address)
+        if (address != "") {
             setAddressBill(address);
             setIsDisabled(false);
         } else {
