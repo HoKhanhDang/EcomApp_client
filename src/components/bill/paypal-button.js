@@ -126,7 +126,7 @@ const ButtonWrapper = ({
             <PayPalButtons
                 className=" h-[150px] w-full "
                 style={style}
-                disabled={isDisabled}
+                disabled={isDisabled || true}
                 forceReRender={[style, currency, amount]}
                 fundingSource=""
                 createOrder={createOrder}
