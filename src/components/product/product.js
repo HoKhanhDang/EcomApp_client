@@ -57,7 +57,7 @@ export default function Product() {
     const [bestSeller, setBestSeller] = useState([]);
     const [laptopProducts, setLaptopProducts] = useState([]);
     const [smartphoneProducts, setSmartphoneProducts] = useState([]);
-
+    const [isRendered, setIsRendered] = useState(false);
 
     const navigate = useNavigate();
     const fetchData = async () => {
@@ -71,11 +71,22 @@ export default function Product() {
         setNewArrival(getData[1].data?.res);
         setLaptopProducts(getData[2].data?.res);
         setSmartphoneProducts(getData[3].data?.res);
+        setIsRendered(true);
     };
 
     useEffect(() => {
         fetchData();
     }, []);
+    
+    useEffect(() => {
+        if (isRendered) {
+            window.dispatchEvent(new Event('resize'));
+        }
+    }, [isRendered]);
+
+    if (!isRendered) {
+        return null; 
+    }
 
     
     return (
